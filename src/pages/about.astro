@@ -1,0 +1,320 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import ProfileCards from '../components/ProfileCards.astro';
+
+const cardData = [
+  {
+    imageSrc: '/media/about-card-1.png',
+    title: 'Data Analysis',
+    description: 'Your data is valuable to us, we analyze and provide the most powerful customized marketing strategies just right for your business.',
+  },
+  {
+    imageSrc: '/media/about-card-2.png',
+    title: 'PPC Marketing',
+    description: 'Allow our powerful AI techniques to secure your web Page the best profitable customer traffic you always wanted.',
+  },
+  {
+    imageSrc: '/media/about-card-3.png',
+    title: 'Business Analytics',
+    description: 'Better performance to gain insight and drive business planning, but don’t worry we will handle it for you!',
+  },
+  {
+    imageSrc: '/media/about-card-4.png',
+    title: 'Social Media Marketing',
+    description: 'The most powerful marketing tool of this era in the palm of your hands.',
+  },
+];
+---
+
+<Layout title="DOA - Digital Optimizer Agency">
+  <Header />
+  <main>
+    <!-- Primera Sección: About Us -->
+    <section class="about-section">
+      <div class="about-container-wrapper">
+        <div class="about-container">
+          <div class="column left-column">
+            <h2 class="about-title">About Us</h2>
+            <h4>
+              <a href="/" class="home-button">Home</a> About Us______
+            </h4>
+          </div>
+          <div class="column">
+            <img src="/media/personas_trabajando.png" alt="Personas Trabajando" class="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segunda Sección: Servicios (What We Offer) -->
+    <section class="services-section">
+      <div class="card-header">
+        <p class="services-title">BEST EVER SERVICES</p>
+        <h1 class="offer-title">What We Offer</h1>
+      </div>
+      <div class="card-container">
+        {cardData.map((card) => (
+          <Card imageSrc={card.imageSrc} title={card.title} description={card.description} />
+        ))}
+      </div>
+    </section>
+
+    <!-- Tercera Sección: Who We Are -->
+    <section class="who-we-are-section">
+      <div class="who-we-are-container">
+        <div class="column who-image-column">
+          <img src="/media/personasmesa.png" alt="Personas Trabajando" class="who-we-are-image" />
+        </div>
+        <div class="column who-text-column">
+          <h2 class="who-title">Who We Are</h2>
+          <p class="who-paragraph">
+            Creatives, innovators, strategists. Harnessing an understanding of human buyer behavior, our team of dedicated strategists, account managers, and creatives identify, analyze and develop robust strategies: blending data, psychology, and originality, we craft campaigns with personality and precision.
+          </p>
+          <p class="who-paragraph">
+            Results, evolution, growth. With expert knowledge and understanding of every data point, we follow the numbers to drive the best results today and devise a strategy for stronger ones tomorrow.
+          </p>
+          <p class="who-paragraph">
+            Proactive, measured, intelligent. We’re an extension of your brand, more than just a digital marketing agency. We leverage the expertise of a multifaceted team and pair proactive communication with a long-term vision for your business.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <ProfileCards />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+body{
+  margin: 1rem 0 ;
+}
+/* Primera sección */
+.about-section {
+  display: flex;
+  background-color: #edecf0; 
+  padding: 2rem;
+}
+
+.about-container-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  margin-left: 30px;
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.left-column {
+  text-align: left;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-button {
+  background-color: #7c60d5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.home-button:hover {
+  background-color: #5a45a8;
+}
+
+.about-image {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Cambiar la dirección de la sección a columna */
+    padding: 1rem; /* Reducir el padding */
+  }
+
+  .about-container-wrapper {
+    width: 100%; /* Usar el ancho completo */
+  }
+
+  .about-container {
+    flex-direction: column; /* Cambiar la dirección de las columnas a columna */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .column {
+    margin-left: 0; /* Eliminar margen */
+    width: 100%; /* Hacer las columnas de ancho completo */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .left-column {
+    text-align: center; /* Alinear el texto al centro */
+  }
+
+  .about-title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+  }
+
+  .home-button {
+    margin-right: 0; /* Eliminar el margen */
+    margin-bottom: 1rem; /* Agregar espacio entre los botones */
+  }
+
+  .about-image {
+    max-width: 60%; /* Hacer la imagen más pequeña en pantallas pequeñas */
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Segunda seccion */
+
+
+.card-header {
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+  background-color: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.services-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.offer-title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.services-section {
+  background-color: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  padding: 2rem;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Solo una columna */
+    padding: 1rem; /* Reducir el padding */
+  }
+
+  .offer-title {
+    font-size: 2rem; /* Reducir tamaño de fuente en dispositivos pequeños */
+    margin-bottom: 1rem;
+  }
+
+  .services-title {
+    font-size: 1.2rem; /* Reducir tamaño de fuente en dispositivos pequeños */
+  }
+}
+
+
+/* Tercera seccion */
+.who-we-are-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.who-we-are-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.who-image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.who-we-are-image {
+  max-width: 90%;
+  height: auto;
+}
+
+.who-text-column {
+  flex: 2;
+  padding-left: 2rem;
+}
+
+.who-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.who-paragraph {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .who-we-are-section {
+    flex-direction: column; /* Cambiar la dirección de la sección a columna */
+    align-items: center; /* Centrar los elementos */
+    padding: 1rem; /* Reducir el padding */
+  }
+
+  .who-we-are-container {
+    flex-direction: column; /* Cambiar la dirección de las columnas a columna */
+    align-items: center; /* Centrar el contenido */
+    width: 100%; /* Usar el ancho completo */
+  }
+
+  .who-image-column {
+    flex: none; /* Permitir que la imagen se ajuste al tamaño de la pantalla */
+    margin-bottom: 1rem; /* Separar la imagen del texto */
+    width: 80%;
+  }
+
+  .who-text-column {
+    flex: none;
+    padding-left: 0;
+    text-align: center; /* Centrar el texto */
+  }
+
+  .who-title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+  }
+
+  .who-paragraph {
+    font-size: 0.9rem; /* Reducir el tamaño del párrafo */
+  }
+}
+
+</style>

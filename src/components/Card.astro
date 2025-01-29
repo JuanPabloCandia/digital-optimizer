@@ -1,0 +1,56 @@
+---
+const { imageSrc, title, description } = Astro.props;
+---
+
+<div class="card">
+  <img src={imageSrc} alt={title} class="card-image" />
+  <div class="card-content">
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #7c60d5; 
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.card:hover {
+  background-color: #c1b6e6; 
+  color: white; 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+/* Aplicar hover solo a .card-content */
+.card-content:hover h3 {
+  color: white; 
+}
+
+.card-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  transition: none; /* Evitar efectos de hover en la imagen */
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #7c60d5; 
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #333;
+}
+</style>

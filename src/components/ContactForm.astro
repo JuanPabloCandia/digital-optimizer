@@ -1,0 +1,124 @@
+---
+---
+
+<form action="https://formspree.io/f/xvgpeygk" method="POST" class="contact-form">
+	<!-- Título Contact Form encima de las dos columnas -->
+	<h2 class="form-title">Contact Form</h2>
+  
+	<div class="form-row">
+	  <!-- Primera columna: Inputs para Name, Phone y Email -->
+	  <div class="form-column">
+		<div class="form-group">
+		  <label for="name">Name</label>
+		  <input type="text" id="name" name="name" required>
+		</div>
+		<div class="form-group">
+		  <label for="phone">Phone</label>
+		  <input type="tel" id="phone" name="phone" required>
+		</div>
+		<div class="form-group">
+		  <label for="email">Email</label>
+		  <input type="email" id="email" name="email" required>
+		</div>
+	  </div>
+  
+	  <!-- Segunda columna: Textarea para el mensaje -->
+	  <div class="form-column">
+		<div class="form-group">
+		  <label for="message" class="align-label">Message</label>
+		  <textarea id="message" name="message" required></textarea>
+		</div>
+	  </div>
+	</div>
+  
+	<div class="form-button">
+	  <button type="submit">Send</button>
+	</div>
+  </form>
+  
+  <style>
+	body, html {
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  font-family: Arial, sans-serif;
+	}
+  
+	.contact-form {
+	  width: 80%;
+	  margin: 3rem auto; 
+	  padding: 2rem;
+	  background-color: #f9f9f9;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	}
+  
+	.form-title {
+	  font-size: 2rem;
+	  text-align: center;
+	  margin-bottom: 2rem;
+	}
+  
+	.form-row {
+	  display: flex;
+	  justify-content: space-between;
+	  gap: 2rem; 
+	}
+  
+	.form-column {
+	  flex: 1; 
+	}
+  
+	.form-group {
+	  margin-bottom: 1rem;
+	}
+  
+	label {
+	  display: block;
+	  margin-bottom: 0.5rem;
+	  font-weight: bold;
+	}
+  
+	input, textarea {
+	  width: 85%; 
+	  padding: 0.8rem;
+	  border: 1px solid #ccc;
+	  border-radius: 8px; 
+	  font-size: 1rem;
+	}
+  
+	textarea {
+	  height: 180px;
+	}
+  
+	.form-button {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 2rem;
+	}
+  
+	button {
+	  background-color: #6c5ce7;
+	  color: white;
+	  border: none;
+	  padding: 0.75rem 2rem;
+	  border-radius: 4px;
+	  font-size: 1.2rem;
+	  cursor: pointer;
+	}
+  
+	button:hover {
+	  background-color: #5a4ad1;
+	}
+  
+	@media (max-width: 768px) {
+	  .contact-form {
+		width: 95%;
+		margin-left: 0; 
+	  }
+	  .form-row {
+		flex-direction: column;
+	  }
+	}
+  </style>
+  

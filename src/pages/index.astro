@@ -1,0 +1,789 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="DOA - Digital Optimizer Agency">
+    <Header />
+    <main>
+        <!-- Primera seccion -->
+        <section class="tagging-solutions">
+            <!-- Primera seccion -->
+            <div class="text-content">
+                <h1>TAGGING SOLUTIONS</h1>
+                <ul class="tag-list">
+                    <li>Facebook</li>
+                    <li>Google</li>
+                    <li>YouTube</li>
+                    <li>TikTok</li>
+                    <li>Snapchat</li>
+                </ul>
+                <h2>Paid Media Focus SAAS Apps & Ecommerce with Top Notch Analytics.</h2>
+                <button class="learn-more-btn">Learn More</button>
+            </div>
+            <div class="image-content">
+                <img src="/media/personasmesa.png" alt="Tagging Solutions Image" class="tagging-image">
+            </div>
+        </section>
+
+        <!-- Segunda seccion -->
+        <section class="data-process-optimization">
+            <!-- Segunda seccion -->
+            <h3>DATA & PROCESSES OPTIMIZATION</h3>
+            <h1>What We Do</h1>
+            <div class="columns">
+                <div class="column">
+                    <img src="/media/hoja-lapiz.png" alt="Planning Icon">
+                    <h2>1. Planning</h2>
+                    <p>MULTI-CHANNEL APPROACH USING MULTIPLE DATA POINTS AND AN OPTIMIZED TESTING FRAMEWORK</p>
+                </div>
+                <div class="column">
+                    <img src="/media/pc.png" alt="Execution Icon">
+                    <h2>2. Execution</h2>
+                    <p>DOCUMENT, EDIT, LAUNCH MEDIA BUYING EXPERIMENTS PROCESSES</p>
+                </div>
+                <div class="column">
+                    <img src="/media/roket.png" alt="Optimization Icon">
+                    <h2>3. Optimization</h2>
+                    <p>REVIEW BIDDING, TARGETING, AUDIENCE AND CREATIVE EXPERIMENTS INTO SCALABLE AND PROFITABLE WORKFLOWS</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Tercera seccion -->
+        <section class="ppc-cro-section">
+			<!-- Tercera seccion -->
+            <div class="columns">
+                <div class="column">
+                    <h2 class="black-title">PPC/CRO & Growth Best Practices</h2>
+
+                    <div class="content-item">
+                        <img src="/media/grafica.png" alt="Data management Image" class="icon">
+                        <div class="text-content">
+                            <h3>Data Management</h3>
+                            <p>Your data is valuable. Let us help you create a data-rich environment that provides the most efficient and profitable marketing strategies for your business.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-item">
+                        <img src="/media/cursor.png" alt="User Acquisition Image" class="icon">
+                        <div class="text-content">
+                            <h3>User Acquisition & CRO</h3>
+                            <p>Allow our powerful data management solution to provide the customer traffic you always wanted.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column full-width-image-column">
+                    <img src="/media/personas_trabajando.png" alt="Personas Trabajando Image" class="dynamic-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuarta seccion -->
+        <section class="data-architecture-section">
+			<!-- Cuarta seccion -->
+            <div class="columns" style="width: 80%; margin: 0 auto;">
+                <div class="column" style="flex: 0 0 50%;">
+                    <img src="/media/arreglando-paginas.png" alt="Data Architecture Image" class="architecture-image" style="width: 100%; height: auto;">
+                </div>
+                <div class="column" style="flex: 0 0 50%; padding: 15px;">
+                    <h2>Data Architecture</h2>
+                    <p>Leave all the geeky stuff to us; we establish and manage your tags, events and attributes across all platforms.</p>
+                    <div class="circle-container">
+                        <div>
+                            <div class="circle circle-text">100%</div>
+                            <div>Advanced Tag Management</div>
+                        </div>
+                        <div>
+                            <div class="circle circle-text">100%</div>
+                            <div>Reporting & Analytics</div>
+                        </div>
+                        <div>
+                            <div class="circle circle-text">100%</div>
+                            <div>Landing Page Optimization</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quinta seccion -->
+		<section class="best-service-section">
+            <!-- Quinta seccion -->
+			<h3>THE BEST SERVICE EVER!</h3>
+			<h1>hiring us! we will do it for you</h1>
+			
+			<div class="columns-cards">
+			  <div class="column-cards">
+				<Card 
+				  imageSrc="/media/card-1.png" 
+				  title="Paid Acquisition" 
+				  description="Platforms at the level of Google, Facebook, Tik Tok offer pay-per-click services. The complete domain of audiences and group classification allows you to reach an objective." 
+				/>
+				<Card 
+				  imageSrc="/media/card-3.png" 
+				  title="Reporting & Analytics " 
+				  description="End-to-end analytics setup service for new and established businesses. Answer your site’s most profound questions with a full-scope tag implementation service." 
+				/>
+			  </div>
+			  <div class="column-cards">
+				<Card 
+				  imageSrc="/media/card-2.png" 
+				  title="Conversion Optimization" 
+				  description="Accompaniment for companies that want to see a better user experience that has a higher conversion rate. Increase the amount of user who perform an event on a website." 
+				/>
+				<Card 
+				  imageSrc="/media/card-4.png" 
+				  title="Growth Management" 
+				  description="Growth isn’t real growth unless your customers keep coming back. Our one-on-one consulting sessions are a chance to pick our brains and open up a frank dialogue about where your brand’s at and where it’s heading." 
+				/>
+			  </div>
+			</div>
+		  </section>
+		
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+/* primera sección */
+    .tagging-solutions {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        gap: 1.5rem; /* Separación entre texto e imagen */
+    }
+
+    .text-content {
+        flex: 0 0 50%;
+        margin-right: 2rem;
+    }
+
+    .image-content {
+        flex: 0 0 50%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        color: #7c60d5;
+        margin-bottom: 1rem;
+    }
+
+    .tag-list {
+        list-style: none;
+        padding: 0;
+        width: fit-content; /* Ajusta el ancho de la lista al contenido */
+        margin-left: auto;
+        margin-right: auto; /* Centrar la lista */
+    }
+
+    .tag-list li {
+        display: flex; /* Activar flexbox */
+        align-items: center; /* Centrar flecha y texto verticalmente */
+        margin-bottom: 0.75rem;
+        font-size: 1.3rem;
+        text-align: left; /* Alineación izquierda para los elementos */
+    }
+
+    .tag-list li::before {
+        content: '→'; /* Flecha */
+        color: green;
+        font-size: 1.5rem;
+        margin-right: 0.5rem; /* Espacio entre la flecha y el texto */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        font-weight: normal;
+    }
+
+    .learn-more-btn {
+        background-color: #7c60d5;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .learn-more-btn:hover {
+        background-color: #5e2d8f;
+    }
+
+    .tagging-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Media queries para dispositivos pequeños */
+    @media (max-width: 1024px) {
+        .tagging-solutions {
+            flex-direction: column; /* Cambiar a diseño de columna */
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .image-content {
+            order: -1; /* Colocar la imagen primero */
+            flex: 0 0 auto; /* Ajustar tamaño dinámico */
+            margin-bottom: 1.5rem;
+        }
+
+        .text-content {
+            flex: 0 0 auto; /* Ajustar tamaño dinámico */
+            margin-right: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        .tag-list {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left; /* Alineación de texto a la izquierda */
+        }
+
+        .tag-list li {
+            font-size: 1.1rem;
+            justify-content: flex-start; /* Alinear los elementos de la lista a la izquierda */
+        }
+
+        .learn-more-btn {
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+        }
+    }
+
+    /* Media queries para dispositivos muy pequeños */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+        }
+
+        .tag-list li {
+            font-size: 1rem;
+        }
+
+        .learn-more-btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+
+
+
+
+
+
+/* Segunda seccion */
+    .data-process-optimization {
+        text-align: center;
+        padding: 3rem 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .data-process-optimization h1 {
+        font-size: 3rem;
+        color: #7c60d5;
+        margin-bottom: 2rem;
+    }
+
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .column {
+        flex: 0 0 30%;
+        text-align: center;
+    }
+
+    .column img {
+        width: 120px;
+        height: auto;
+    }
+
+    .column h2 {
+        color: #7c60d5;
+        margin: 1rem 0;
+    }
+
+    .column p {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.5rem;
+    }
+
+    /* Media queries para dispositivos pequeños */
+    @media (max-width: 1024px) {
+        .columns {
+            flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+            align-items: center; /* Centrar las columnas */
+            gap: 1.5rem; /* Ajustar el espacio entre columnas */
+        }
+
+        .column {
+            flex: 0 0 auto; /* Ajustar el tamaño de las columnas */
+            width: 90%; /* Hacer que las columnas ocupen más espacio en pantallas pequeñas */
+        }
+
+        .column img {
+            width: 80px; /* Reducir el tamaño de las imágenes en dispositivos pequeños */
+        }
+
+        .data-process-optimization h1 {
+            font-size: 2.5rem; /* Reducir el tamaño del título en pantallas pequeñas */
+        }
+
+        .column h2 {
+            font-size: 1.3rem; /* Reducir el tamaño de los subtítulos */
+        }
+
+        .column p {
+            font-size: 1rem; /* Ajustar el tamaño del texto en pantallas pequeñas */
+        }
+    }
+
+    /* Media queries para dispositivos muy pequeños */
+    @media (max-width: 768px) {
+        .data-process-optimization h1 {
+            font-size: 2rem; /* Ajustar el tamaño del título en pantallas muy pequeñas */
+        }
+
+        .column img {
+            width: 70px; /* Ajustar aún más el tamaño de la imagen */
+        }
+
+        .column h2 {
+            font-size: 1.2rem; /* Ajustar el tamaño de los subtítulos en pantallas muy pequeñas */
+        }
+
+        .column p {
+            font-size: 0.95rem; /* Ajustar el tamaño del texto en pantallas muy pequeñas */
+        }
+    }
+
+
+
+
+
+
+
+/* Tercera seccion */
+.ppc-cro-section {
+    width: 80%; 
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.ppc-cro-section .columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.ppc-cro-section .column {
+    flex: 0 0 50%; 
+}
+
+.content-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem; 
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten cuando sea necesario */
+}
+
+.content-item img.icon {
+    width: 15%;  /* Imágenes pequeñas en tamaño normal */
+    margin-right: 1rem; 
+}
+
+.text-content {
+    flex: 1; 
+}
+
+.text-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.text-content p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-align: left; 
+}
+
+.full-width-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-width-image-column .dynamic-image {
+    width: 80%; 
+    height: auto; 
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 1024px) {
+    .ppc-cro-section .columns {
+        flex-direction: column; /* Las columnas se apilan verticalmente en pantallas pequeñas */
+        gap: 1.5rem; /* Reducir el espacio entre las columnas */
+    }
+
+    /* Colocamos la columna con la imagen grande primero */
+    .ppc-cro-section .column:first-child {
+        order: 1; /* La columna con la imagen grande se coloca primero */
+    }
+
+    /* Colocamos la columna con texto e imágenes pequeñas después */
+    .ppc-cro-section .column:last-child {
+        order: 2; /* La columna con el texto e imágenes pequeñas se coloca después */
+    }
+
+    .content-item {
+        flex-direction: row; /* Mantenemos el texto a la derecha de las imágenes */
+        align-items: center; /* Alineamos el texto verticalmente al centro */
+    }
+
+    .content-item img.icon {
+        width: 12%; /* Reducimos el tamaño de las imágenes pequeñas en pantallas pequeñas */
+        margin-bottom: 1rem; /* Añadimos espacio debajo de la imagen */
+    }
+
+    .text-content {
+        text-align: left; /* Mantenemos el texto alineado a la izquierda al lado de la imagen */
+    }
+
+    .text-content h3 {
+        font-size: 1.1rem; /* Reducir tamaño de texto en pantallas pequeñas */
+    }
+
+    .text-content p {
+        font-size: 0.95rem; /* Reducir tamaño de párrafo */
+    }
+
+    .full-width-image-column .dynamic-image {
+        width: 90%; /* Ajustamos la imagen al 90% del contenedor */
+    }
+}
+
+/* Media queries para dispositivos muy pequeños */
+@media (max-width: 768px) {
+    .ppc-cro-section .columns {
+        flex-direction: column; /* En pantallas más pequeñas, las columnas deben apilarse */
+        gap: 1.2rem;
+    }
+
+    /* Colocamos la columna con la imagen grande primero */
+    .ppc-cro-section .column:first-child {
+        order: 1; /* La columna con la imagen grande se coloca primero */
+    }
+
+    /* Colocamos la columna con texto e imágenes pequeñas después */
+    .ppc-cro-section .column:last-child {
+        order: 2; /* La columna con el texto e imágenes pequeñas se coloca después */
+    }
+
+    .content-item {
+        flex-direction: row; /* Aseguramos que el texto siempre se mantenga al lado de las imágenes */
+        align-items: center; /* Centrar el texto verticalmente */
+    }
+
+    .content-item img.icon {
+        width: 10%; /* Hacemos las imágenes aún más pequeñas en pantallas más pequeñas */
+        margin-bottom: 1rem; /* Añadimos espacio debajo de la imagen */
+    }
+
+    .text-content {
+        text-align: left; /* Mantener el texto alineado a la izquierda */
+    }
+
+    .text-content h3 {
+        font-size: 1rem; /* Reducimos aún más el tamaño de los encabezados */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Reducir el tamaño de los párrafos en pantallas muy pequeñas */
+    }
+
+    .full-width-image-column .dynamic-image {
+        width: 80%; /* Aseguramos que la imagen ocupe todo el ancho del contenedor */
+    }
+}
+
+
+
+
+
+
+
+
+/* Cuarta seccion */
+.data-architecture-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.data-architecture-section h2 {
+    color: #7c60d5;
+    margin-bottom: 1rem;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-evenly; /* Espacio uniforme entre los elementos */
+    align-items: stretch; /* Todos los elementos tienen la misma altura */
+    text-align: center;
+    gap: 2rem; /* Espaciado entre los elementos */
+}
+
+.circle-container > div {
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente círculo y texto */
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Todos los elementos ocupan el mismo ancho */
+    min-height: 200px; /* Altura mínima uniforme */
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; 
+    height: 120px; 
+    border: 6px solid #7c60d5; 
+    border-radius: 50%; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 1rem; /* Espacio debajo del círculo */
+}
+
+.circle-text {
+    font-size: 1.2rem;
+}
+
+.architecture-image {
+    width: 100%;
+    height: auto;
+}
+
+    /* ✅ Se cambia a UNA SOLA COLUMNA en pantallas pequeñas */
+    @media (max-width: 1024px) {
+        .columns {
+            flex-direction: column;
+        }
+
+        .column {
+            max-width: 100%;
+        }
+
+        .architecture-image {
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .column {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    /* Asegura que el texto esté arriba y la imagen debajo */
+    .column:nth-child(1) { /* Imagen */
+        order: 2;
+    }
+
+    .column:nth-child(2) { /* Texto */
+        order: 1;
+    }
+
+    .architecture-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px; /* Espacio entre texto e imagen */
+    }
+      
+        
+    }
+
+    /* Ajustes para celulares (≤768px) */
+    @media (max-width: 768px) {
+        .circle {
+            width: 90px;
+            height: 90px;
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .columns {
+        display: flex;
+        flex-direction: column;
+    }  
+}
+
+    @media (max-width: 560px) {
+    .circle-container {
+        flex-direction: column;
+        align-items: center; 
+        gap: .6rem; 
+    }
+
+    .text-container {
+        order: 1; /* Texto va primero */
+    }
+}
+
+    /* Ajustes para celulares pequeños (≤480px) */
+    @media (max-width: 480px) {
+        .column-cards{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+
+
+
+
+
+
+/*Quinta seccion*/
+.best-service-section {
+    text-align: center;
+    padding: 3rem 1rem; /* Reduce el padding lateral para móviles */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.best-service-section h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.best-service-section h1 {
+    font-size: 2.5rem;
+    color: #7c60d5;
+    margin-bottom: 2.5rem;
+}
+
+.columns-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Hace que cada columna de tarjetas tenga el mismo ancho */
+.column-cards {
+    flex: 0 0 48%; /* Ajusta el ancho para que no sobrepase 48% */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .best-service-section {
+        width: 90%; /* Más ancho para adaptarse a pantallas medianas */
+    }
+    .columns-cards {
+        gap: 1.5rem; /* Reduce el gap para ahorrar espacio */
+    }
+}
+
+@media (max-width: 768px) {
+    .columns-cards {
+        flex-direction: column; /* Se apilan en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas */
+        gap: 2rem; /* Mantiene buen espaciado */
+    }
+
+    .column-cards {
+        flex: 1; /* Cada tarjeta toma el 100% del ancho disponible */
+        max-width: 90%; /* Limita el ancho para que no se estiren demasiado */
+    }
+
+    .best-service-section h3 {
+        font-size: 1.8rem; /* Reduce el tamaño para móviles */
+    }
+
+    .best-service-section h1 {
+        font-size: 2rem; /* Reduce el tamaño para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .best-service-section {
+        padding: 2rem 0.5rem; /* Ajusta el padding para pantallas pequeñas */
+        width: 95%;
+    }
+
+    .columns-cards {
+        gap: 1rem; /* Reduce más el espaciado */
+    }
+
+    .column-cards {
+        max-width: 100%; /* Ocupar todo el ancho en móviles */
+    }
+
+    .best-service-section h3 {
+        font-size: 1.5rem; 
+    }
+
+    .best-service-section h1 {
+        font-size: 1.8rem;
+    }
+}
+</style>

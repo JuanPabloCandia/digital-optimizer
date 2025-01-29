@@ -1,0 +1,241 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout title="Contact Us - DOA">
+  <Header />
+  <main>
+    <!-- Primera Sección: Contact Us -->
+    <section class="about-section">
+      <div class="about-container-wrapper">
+        <div class="about-container">
+          <div class="column left-column">
+            <h2 class="about-title">Contact Us</h2>
+            <h4>
+              <a href="/" class="home-button">Home</a> Contact Us______
+            </h4>
+          </div>
+          <div class="column">
+            <img src="/media/personas_trabajando.png" alt="Personas Trabajando" class="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="paragraph">We’d love to hear from you! Feel free to reach out to us with any questions, inquiries, or collaboration opportunities. Our dedicated team at Digital Optimizer Agency is here to provide you with expert digital marketing services tailored to your specific needs.</p>
+
+    <!-- Formulario de contacto -->
+    <ContactForm />
+
+    <!-- Seccion Información de Contacto y Mapa -->
+    <section class="contact-info-section">
+      <div class="contact-info-container">
+        <div class="column left-column">
+          <h3>Contact Information</h3>
+          <p><strong>Contact Number</strong><br />+1 (305) 874 9058</p>
+          <p><strong>Address</strong><br />30 N Gould St, Suite R, Sheridan WY, 82801</p>
+          <p><strong>Email</strong><br />support@digitaloptimizer.agency</p>
+        </div>
+        <div class="column right-column">
+          <h3>Location Map</h3>
+          <iframe
+            src="https://maps.google.com/maps?width=600&height=400&hl=en&q=30%20N%20Gould%20St,%20Suite%20R,%20Sheridan%20WY,%2082801&ie=UTF8&t=&z=14&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  body{
+    margin: 1rem 0;
+  }
+  /* Primera seccion*/
+  .about-section {
+  display: flex;
+  background-color: #edecf0; 
+  padding: 2rem;
+}
+
+.about-container-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  margin-left: 30px;
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.left-column {
+  text-align: left;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-button {
+  background-color: #7c60d5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.home-button:hover {
+  background-color: #5a45a8;
+}
+
+.about-image {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Cambiar la dirección de la sección a columna */
+    padding: 1rem; /* Reducir el padding */
+  }
+
+  .about-container-wrapper {
+    width: 100%; /* Usar el ancho completo */
+  }
+
+  .about-container {
+    flex-direction: column; /* Cambiar la dirección de las columnas a columna */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .column {
+    margin-left: 0; /* Eliminar margen */
+    width: 100%; /* Hacer las columnas de ancho completo */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .left-column {
+    text-align: center; /* Alinear el texto al centro */
+  }
+
+  .about-title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+  }
+
+  .home-button {
+    margin-right: 0; /* Eliminar el margen */
+    margin-bottom: 1rem; /* Agregar espacio entre los botones */
+  }
+
+  .about-image {
+    max-width: 60%; /* Hacer la imagen más pequeña en pantallas pequeñas */
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+  
+
+  /* segunda seccion */
+  .paragraph {
+    text-align: center; 
+    font-size: 1.2rem;
+    margin: 4rem auto; 
+    max-width: 1000px; 
+  }
+
+  /* Cuarta seccion*/
+  .contact-info-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%)
+}
+
+.contact-info-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.contact-info-container .column {
+  flex: 1;
+  padding: 1rem;
+}
+
+.column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 400px;
+}
+
+iframe {
+  flex: 1;
+  border: none; /* Eliminar el borde del iframe */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-info-section {
+    flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+    padding: 1rem; /* Reducir el padding */
+  }
+
+  .contact-info-container {
+    width: 100%; /* Usar el ancho completo */
+    flex-direction: column; /* Cambiar la dirección a columna */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .contact-info-container .column {
+    width: 100%; /* Hacer las columnas de ancho completo */
+    padding: 1rem 0; /* Ajustar el padding */
+    text-align: center; /* Alinear el texto al centro */
+  }
+
+  .column h3 {
+    font-size: 1.2rem; /* Reducir el tamaño del título */
+  }
+
+  .right-column {
+    height: auto; /* Eliminar la altura fija para flexibilidad */
+  }
+
+  iframe {
+    width: 100%; /* Hacer el iframe de ancho completo */
+    height: 500px; /* Aumentar la altura del iframe para el mapa */
+  }
+}
+
+
+</style>

@@ -1,0 +1,99 @@
+---
+const cardData = [
+  {
+    imageSrc: '/media/carrusel-camilo.PNG',
+    title: 'Camilo',
+    description: 'Un experto en análisis de datos con un enfoque en estrategias personalizadas para negocios.',
+  },
+  {
+    imageSrc: '/media/carrusel-geraldine.PNG',
+    title: 'Geraldine',
+    description: 'Especialista en marketing PPC, asegurando tráfico rentable para su sitio web.',
+  },
+  {
+    imageSrc: '/media/carrusel-ricardo.PNG',
+    title: 'Ricardo',
+    description: 'Analista de negocios que optimiza el rendimiento a través de un análisis exhaustivo.',
+  },
+  {
+    imageSrc: '/media/carrusel-juan.PNG',
+    title: 'Juan',
+    description: 'Experto en marketing en redes sociales, creando campañas efectivas y atractivas.',
+  },
+];
+---
+
+<section class="profile-cards-section">
+  <h2 class="team-title">MEET OUR TEAM!</h2>
+  <div class="profile-cards-container">
+    {cardData.map((card) => (
+      <div class="profile-card">
+        <img src={card.imageSrc} alt={card.title} class="profile-card-image" />
+        <h3 class="profile-card-title">{card.title}</h3>
+        <p class="profile-card-description">{card.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+.profile-cards-section {
+  padding: 2rem 0;
+  background-color: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  text-align: center;
+}
+
+.team-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.profile-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile-card {
+  background-color: white;
+  border: 2px solid #7c60d5;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  width: 220px;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.profile-card-title {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.profile-card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.profile-card:hover {
+  background-color: #a08fd6;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card:hover .profile-card-title,
+.profile-card:hover .profile-card-description {
+  color: white;
+}
+</style>
