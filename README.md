@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f86758bdcea45234a115a6b637b9d7e569e5c18
 # Astro Starter Kit: Basics
 
 ```sh
@@ -53,6 +56,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<<<<<<< HEAD
 =======
 # Digital Optimizer Agency Site
 
@@ -148,3 +152,5 @@ For open source projects, say how it is licensed.
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
 >>>>>>> 4b1e0f78317e445956cbd25487abf8099ba01e1c
+=======
+>>>>>>> 4f86758bdcea45234a115a6b637b9d7e569e5c18
