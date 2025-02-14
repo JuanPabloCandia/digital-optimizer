@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-<<<<<<< HEAD
 import Card from '../components/Card.astro';
 ---
 
@@ -158,7 +157,7 @@ import Card from '../components/Card.astro';
         padding: 2rem;
         width: 80%;
         margin: 0 auto;
-        gap: 1.5rem; /* Separación entre texto e imagen */
+        gap: 1.5rem; 
     }
 
     .text-content {
@@ -179,24 +178,24 @@ import Card from '../components/Card.astro';
     .tag-list {
         list-style: none;
         padding: 0;
-        width: fit-content; /* Ajusta el ancho de la lista al contenido */
+        width: fit-content; 
         margin-left: auto;
-        margin-right: auto; /* Centrar la lista */
+        margin-right: auto; 
     }
 
     .tag-list li {
-        display: flex; /* Activar flexbox */
-        align-items: center; /* Centrar flecha y texto verticalmente */
+        display: flex; 
+        align-items: center; 
         margin-bottom: 0.75rem;
         font-size: 1.3rem;
-        text-align: left; /* Alineación izquierda para los elementos */
+        text-align: left; 
     }
 
     .tag-list li::before {
-        content: '→'; /* Flecha */
+        content: '→'; 
         color: green;
         font-size: 1.5rem;
-        margin-right: 0.5rem; /* Espacio entre la flecha y el texto */
+        margin-right: 0.5rem; 
     }
 
     h2 {
@@ -788,52 +787,3 @@ import Card from '../components/Card.astro';
     }
 }
 </style>
-=======
-import ServiceCard from '../components/ServiceCard.astro';
----
-
-<Layout title="DOA - Digital Optimizer Agency">
-	<Header />
-	<main>
-		<h1>Welcome to DOA</h1>
-		<p>We are your digital optimization experts.</p>
-		<section>
-			<h2>Our Services</h2>
-			<div class="services">
-				<ServiceCard 
-					title="Tagging Solutions" 
-					description="Find Media Leaks and SAAS Apps & Experiments with Tag Based Analytics" 
-				/>
-				<ServiceCard 
-					title="PPC/CRO & Growth" 
-					description="Best practices for Pay-Per-Click, Conversion Rate Optimization, and Growth" 
-				/>
-				<ServiceCard 
-					title="Data Architecture" 
-					description="We establish and manage your tags, events, and software needs across different platforms" 
-				/>
-			</div>
-		</section>
-	</main>
-	<Footer />
-</Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.services {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 2rem;
-		justify-content: center;
-	}
-</style>
->>>>>>> 4f86758bdcea45234a115a6b637b9d7e569e5c18
